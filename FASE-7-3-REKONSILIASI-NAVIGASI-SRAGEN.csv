@@ -1,0 +1,13 @@
+item_menu,urutan_hierarki,pola_pembanding,halaman_tujuan_sragen,status_url,lokasi_menu,uji_desktop,uji_mobile,catatan
+Home,1 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Profil,2 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),#,relatif,primary + mobile_menu,LULUS,BELUM DIUJI,
+Sejarah,3 (parent=19),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/sejarah/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Visi &#038; Misi,4 (parent=19),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/visi-misi/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Struktur Organisasi,5 (parent=19),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/struktur-organisasi/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Akademik,6 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),#akademik,relatif,primary + mobile_menu,LULUS,BELUM DIUJI,
+Jurusan/Konsentrasi Keahlian,7 (parent=20),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/jurusan-konsentrasi-keahlian/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Kalender Akademik,8 (parent=20),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/kalender-akademik/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Fasilitas Sekolah,9 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/fasilitas/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Prestasi,10 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/prestasi/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Berita/Artikel,11 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/berita-artikel/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
+Kontak,12 (parent=0),pola Astra + menu utama (seperti Cibitung/Tambun/Kebumen),http://localhost/staging/sragen/kontak/,lokal,primary + mobile_menu,LULUS,BELUM DIUJI,
