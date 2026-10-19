@@ -1,0 +1,7 @@
+item_id,kategori,objek,jumlah,bukti,status
+ART-01,Konten,post publish terimpor,1,sumber ~96 publish,KURANG
+ART-02,Konten,halaman terimpor,13 (12 publish + 1 draft),sumber ~12,OK
+ART-03,Konten,item WXR,149 dipilih / 135 dikeluarkan,konverter convert_dump_to_wxr.py,PERLU AUDIT
+ART-04,Konten,postmeta serialized ditunda,147,belum diproses aman,PERLU AUDIT
+ART-05,Keamanan,IoC diblokir konverter,0,tidak ada yang diblokir,OK
+ART-06,Keamanan,akun lama diimpor,0,--authors=skip,OK
