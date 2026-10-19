@@ -1,0 +1,10 @@
+item_id,objek,sumber,staging,status,alasan
+ART-01,artikel post_type=post,0 publish (1 auto-draft),0,LENGKAP,sumber tidak punya artikel publish; post bawaan WP dihapus
+ART-02,halaman page,13 (12 publish+1 draft),13,LENGKAP,
+EXC-revision,revision,55,0,DIKECUALIKAN,bukan konten publik
+EXC-oembed_cac,oembed_cache,29,0,DIKECUALIKAN,bukan konten publik
+EXC-customize_,customize_changeset,22,0,DIKECUALIKAN,bukan konten publik
+EXC-request,request,22,0,DIKECUALIKAN,bukan konten publik
+EXC-custom-cod,custom-code,5,0,DIKECUALIKAN,bukan konten publik
+EXC-envato_tk_,envato_tk_import,1,0,DIKECUALIKAN,bukan konten publik
+EXC-auto-draft,auto-draft,1,0,DIKECUALIKAN,bukan konten publik
