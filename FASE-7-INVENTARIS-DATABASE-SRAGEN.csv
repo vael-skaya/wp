@@ -1,0 +1,9 @@
+item_id,kategori,objek,isi,status
+DB-01,core,wp_posts,"61 attachment, 19 nav_menu_item, 12 page publish, 1 page draft, 9 elementor_library, 2 wp_navigation, 1 post",SEBAGIAN
+DB-02,core,wp_users,1 (sragen_admin),OK
+DB-03,core,wp_options,"elementor_cpt_support, elementor_google_font, nav_menu_options, site_logo diperiksa",OK
+DB-04,media,wp_posts(attachment),61 dari 107 lampiran sumber,KURANG
+DB-05,konten,wp_posts(post),1 dari ~96 artikel sumber,KURANG
+DB-06,dikecualikan,119 tabel plugin,"woocommerce, wpforms, forminator, wp-file-manager, dll. TIDAK diimpor",SENGAJA
+DB-07,dikecualikan,akun & meta auth,30 akun admin sumber + usermeta + sso_token TIDAK diimpor,SENGAJA
+DB-08,dikecualikan,IoC,menu x/proof dan rujukan wp2shell TIDAK diimpor (0 sisa),SENGAJA
