@@ -1,0 +1,29 @@
+item_id,category,requirement,evidence,status,risk,approval_required,notes
+PK-01,input,Dump sumber terverifikasi hash penuh,"SHA-256 0448259bb0a117636e2e40bcdd11b15ea2f66d1f7615a84769dac0680b46f3af (80.897.366 B), cocok dengan FASE-4C-1 & INDEX",done,low,no,dihitung ulang 19-Okt-2026
+PK-02,input,Inventaris & checksum konsisten per path,7.445 entri di keduanya; himpunan path identik (0 selisih); 0 duplikat/traversal/baris rusak,done,low,no,
+PK-03,input,Manifest v3 sebagai referensi tunggal,"FASE-6K-C-MANIFEST-MEDIA-SRAGEN-v3.csv 178.797 B, SHA-256 bf9ec91253007cca645d7f982430287f03b305ace6bfe8cfee5c31896534a808",done,low,no,"v1/v2 tidak dipakai, tidak diubah"
+PK-04,media,Berkas asli 107/107 terverifikasi,path+ukuran+SHA-256 dihitung dari byte aktual; 0 missing,done,low,no,
+PK-05,media,Derivative sizes[] 310/310 terverifikasi,semua cocok checksum,done,low,no,"boleh dibuang, WP membuat ulang"
+PK-06,media,original_image teridentifikasi terpisah,id 1061 SPMB-GELOMBANG-II.webp (733.614 B) vs versi -scaled,done,low,no,
+PK-07,media,Validasi isi PDF (bukan hanya hash),KALDIK_2025_2026.pdf 2.855.173 B verified; header %PDF- dan JS internal BELUM diperiksa,pending,medium,no,tahap 8 rencana migrasi
+PK-08,media,Sanitas path kandidat,"0 path absolut, 0 traversal, 0 duplikat, 0 YYYY/MM ganda, 0 ekstensi berisiko, 0 direktori terlarang",done,low,no,418/418 ada di tree bukti
+PK-09,media,Media tak dirujuk (2.022) dikarantina,1.701 media + 166 aset Elementor + 155 log/cache/sesi/backup,pending,medium,yes,AP-5 kurasi manual; tidak boleh migrasi otomatis
+PK-10,keamanan,Direktori log/cache/backup dikecualikan,"wc-logs, cartflows-logs, astra-sites, wpforms/cache, wp-file-manager-pro, ai-builder, template-kits, forminator",done,low,no,
+PK-11,keamanan,Artefak IoC docroot dikecualikan mutlak,"goodsdetails.php, shopsdetails.php, wp-slgnup.gz, 7 arsip dropper, archive.php x2, tema wp_zqyq/uvisyfyj, mu-plugins/sso-loader.php, footer terinjeksi, wp-compat/",done,critical,no,hash & dekode statis terdokumentasi Fase 3A
+PK-12,input,"Isi cgi-bin.zip (1,33 GB) diinventaris",inventory-cgi-bin_.txt 0 byte; belum pernah diperiksa,blocked,medium,yes,AP-4 ekstraksi terpandu
+PK-13,lingkungan,Direktori staging + DB smk10_staging_sragen,"belum ada (htdocs/staging hanya cibitung, kebumen, tambun; SHOW DATABASES LIKE kosong)",blocked,low,yes,AP-1
+PK-14,lingkungan,Paket resmi WP + hello-elementor + Elementor,sumber Sragen memakai hello-elementor 7.1.3; index.php sumber 0 byte sehingga inti tidak boleh disalin dari sumber,blocked,medium,yes,AP-2
+PK-15,keputusan,Cakupan plugin staging,"sumber memuat WooCommerce+Midtrans, WPForms, Forminator, MailPoet, Cartflows, wp-file-manager-pro, Elementor Pro",blocked,high,yes,AP-3
+PK-16,akun,Tidak mengimpor akun admin lama,30 akun sumber semuanya administrator; 29 dibuat 2026-07..09 (pola penyerang),done,high,no,kebijakan: buat 1 admin baru
+PK-17,lingkungan,Kapasitas disk cukup,"C: 107 GB kosong; kebutuhan staging ~1-1,8 GB; media terverifikasi 21,1 MB",done,low,no,
+PK-18,keamanan,Blokir HTTP keluar selama impor,rencana: WP_HTTP_BLOCK_EXTERNAL true + sanitasi <wp:attachment_url> (pola 6A),pending,medium,no,
+PK-19,keamanan,Alat pemeriksaan keamanan berkas,belum dipilih; hanya hash yang sudah diperiksa,blocked,high,yes,AP-6
+PK-20,verifikasi,Verifikasi hash pasca-salin ke staging,prosedur: bandingkan ukuran+SHA-256 per file dengan manifest v3,pending,medium,no,
+PK-21,qa,Suite QA fungsional & responsif,"pola 6G/6H (360/390/412/768/1366, overflow, konsol, 0 URL produksi)",pending,medium,no,
+PK-22,rollback,Rencana rollback,drop DB staging + hapus direktori (persetujuan); checkpoint SQL tiap tahap,done,low,no,
+PK-23,paparan,Mitigasi P1: WXR staging Kebumen di repo publik,kebumen-staging-pilot.wxr 1.599.301 B publik; 1 blok <wp:author>; 18 kemunculan pola email,pending,high,no,tindakan di sisi Anda (hapus/privatkan + rotasi kredensial)
+PK-24,paparan,Mitigasi P2: laporan forensik rinci publik,"FASE-4C-2 (130 rujukan C2), FASE-4A (17 rujukan lokasi webshell), LAPORAN-FASE-3A*",pending,high,no,perlu redaksi/privatisasi
+PK-25,paparan,Keselarasan lokal vs repo,"beberapa berkas berbeda ukuran (FASE-4D, FASE-5A, LAPORAN-FASE-2) -> repo tidak identik dengan lokal",needs_manual_review,medium,no,jangan unduh/ganti otomatis
+PK-26,paparan,Pola token/password pada berkas publik,"6 kemunculan pola kata token/API key, 1 pola password: pada 5 berkas",needs_manual_review,medium,no,perlu pemeriksaan manual; nilai tidak dicetak
+PK-27,paparan,Artefak akun rinci 6J tidak publik,recovery-work/sensitive/6j-akun/* tidak ada di 46 berkas repo,done,low,no,namun audit akun lama FASE-4C-2 sudah publik (lihat PK-24)
+PK-28,batasan,Tidak ada perubahan produksi/staging pada fase ini,htdocs/staging tetap 3 situs; DB sragen tidak ada; tidak ada impor/ekstraksi/eksekusi,done,low,no,
