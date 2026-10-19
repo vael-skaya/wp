@@ -1,0 +1,4 @@
+jenis_aset,komponen,referensi_awal,kandidat,sumber,verifikasi,tindakan,lokasi_staging,uji,alasan
+logo PNG,header (semua halaman),custom_logo 1452,logo-smk-10-november-sukodono-sragen-logo-735999cf.png,Downloads + media library,"PNG 500x500 RGBA, sha 735999cf…",CSS 72/48 px,wp-content/uploads/2026/10/...,"72x72@1366, 48x48@<=768",
+ikon SVG,halaman Kontak,inline e-font-icon-svg,tidak diperlukan,Elementor,24 SVG di DOM,tidak diubah,-,LULUS,tidak ada aset gagal
+media/background,section Beasiswa (heading 614c099c),tidak ada referensi media,-,Elementor halaman 10,0 referensi,tidak ada,-,BELUM DIUJI,BELUM DITEMUKAN: section tidak merujuk aset
